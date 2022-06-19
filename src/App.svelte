@@ -1,5 +1,4 @@
 <script>
-	import Fonts from "./lib/Fonts.svelte"
 	import Navbar from "./lib/components/Navbar.svelte"
 </script>
 
@@ -10,5 +9,4 @@
 	rel="stylesheet"
 />
 
-<Fonts />
 <Navbar />
