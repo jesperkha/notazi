@@ -3,7 +3,7 @@
 </script>
 
 <section>
-	<div>
+	<div class="content">
 		<p id="logo">notazi</p>
 		<p id="separator" />
 
@@ -12,14 +12,15 @@
 			<li><a href="/">Some link</a></li>
 		</ul>
 
-		{#if isLoggedIn}
-			<p>username</p>
-			<!-- icon -->
-		{:else}
-			<ul>
-				<li><a href="/">Log in</a></li>
-			</ul>
-		{/if}
+		<!-- Todo: make login align to right border -->
+		<div class="login">
+			{#if isLoggedIn}
+				<p>username</p>
+				<!-- icon -->
+			{:else}
+				<a href="/">Log in</a>
+			{/if}
+		</div>
 	</div>
 </section>
 
@@ -30,18 +31,16 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		background-color: white;
+		box-shadow: 0 0 1em 0em rgba(0, 0, 0, 0.05);
 	}
 
-	div {
+	/* content box for links */
+	.content {
 		width: 50%;
 		height: 100%;
 		display: flex;
 		align-items: center;
-		border-bottom: 1px solid black;
-	}
-
-	div:last-child {
-		align-self: flex-end;
 	}
 
 	#logo {
@@ -52,6 +51,10 @@
 
 	#separator {
 		margin: 1em;
+		margin-left: 2em;
+		width: 2px;
+		height: 40%;
+		background-color: rgba(0, 0, 0, 0.1);
 	}
 
 	ul {
